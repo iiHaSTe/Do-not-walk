@@ -1,3 +1,13 @@
+/**
+  * well, im the developer.
+  * I just want you enjoy my addon. but take all that
+  * make as yours.
+  * So if want to make content with this addon or use it 
+  * in a mod pack, plz mension me as creator
+  *
+  * By Hesham aka Haste
+  */
+
 import {
   world,
   DynamicPropertiesDefinition,
