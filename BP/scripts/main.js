@@ -111,7 +111,7 @@ function defaultSpawn(source) {
 function home(source) {
   if (source.isSneaking) {
     if (source.dimension.id != "minecraft:overworld") {
-      source.runCommandAsync(`msg @s Recall Paper doesn't work in dimension isn't a overworld`);
+      source.sendMessage(`Recall Scroll only works in overworld dimention`);
       return;
     }
     source.setDynamicProperty("home_pos", toFString(source.location));
