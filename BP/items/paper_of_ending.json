@@ -1,0 +1,54 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "haste:paper_of_ending"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "items"
+			},
+			"minecraft:icon": {
+				"texture": "haste_paper_of_ending"
+			},
+			"minecraft:display_name": {
+				"value": "Paper of Ending"
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "haste:on_use",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"haste:on_use": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"say Pain is what awaits you"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"say Screaming echo far away"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"say You feel air getting cold and hot around you"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

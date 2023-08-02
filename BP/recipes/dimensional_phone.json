@@ -1,0 +1,43 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "haste:dimensional_phone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"@": {
+				"item": "haste:recall_paper"
+			},
+			"#": {
+				"item": "haste:paper_of_suffering"
+			},
+			"$": {
+				"item": "haste:paper_of_ending"
+			},
+			"B": {
+				"item": "minecraft:iron_ingot"
+			},
+			"R": {
+				"item": "minecraft:recovery_compass"
+			},
+			"I": {
+				"item": "minecraft:iron_block"
+			},
+			"C": {
+				"item": "minecraft:compass"
+			}
+		},
+		"pattern": [
+			"@#$",
+			"BRB",
+			"ICI"
+		],
+		"result": {
+			"count": 1,
+			"item": "haste:dimensional_phone"
+		}
+	}
+}

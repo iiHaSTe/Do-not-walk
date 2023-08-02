@@ -1,0 +1,39 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "haste:paper_of_ending"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:end_stone"
+			},
+			"$": {
+				"item": "minecraft:ender_eye"
+			},
+			"P": {
+				"item": "minecraft:paper"
+			},
+			"R": {
+				"item": "haste:recall_paper"
+			},
+			"#": {
+				"item": "minecraft:ender_pearl"
+			},
+			"C": {
+				"item": "minecraft:chorus_fruit"
+			}
+		},
+		"pattern": [
+			"E$E",
+			"PRP",
+			"#C#"
+		],
+		"result": {
+			"item": "haste:paper_of_ending"
+		}
+	}
+}

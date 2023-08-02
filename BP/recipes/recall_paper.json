@@ -1,0 +1,33 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "haste:recall_paper"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:paper"
+			},
+			"C": {
+				"item": "minecraft:compass"
+			},
+			"B": {
+				"item": "minecraft:bed"
+			}
+		},
+		"pattern": [
+			" P ",
+			"PCP",
+			" B "
+		],
+		"result": [
+			{
+				"count": 1,
+				"item": "haste:recall_paper"
+			}
+		]
+	}
+}
