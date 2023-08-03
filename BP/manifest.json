@@ -1,71 +1,71 @@
 {
-	"format_version": 2,
-	"metadata": {
-		"authors": [
-			"haste"
-		],
-		"generated_with": {
-			"bridge": [
-				"2.6.0"
-			],
-			"dash": [
-				"0.10.8"
-			]
-		}
-	},
-	"header": {
-		"name": "Don't Walk!!",
-		"description": "Don't walk Addon adds useful item that makes traveling easeir\n\"that add-on has inspired from Terraria\"\nBy Haste (May be Ill change that name)",
-		"min_engine_version": [
-			1,
-			19,
-			60
-		],
-		"uuid": "c21a15b8-8412-491e-bdc6-d67089ec5e59",
-		"version": [
-			1,
-			0,
-			0
-		]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "6be17405-1a33-4fb0-be5e-087c5a8d290e",
-			"version": [
-				1,
-				0,
-				0
-			]
-		},
-		{
-			"type": "script",
-			"language": "javascript",
-			"uuid": "39241808-50a2-4cc8-9ddf-39b35af29ac2",
-			"entry": "scripts/main.js",
-			"version": [
-				1,
-				0,
-				0
-			]
-		}
-	],
-	"dependencies": [
-		{
-			"uuid": "1a5bb7fd-556d-4578-9ad7-655b5813441b",
-			"version": [
-				1,
-				0,
-				0
-			]
-		},
-		{
-			"module_name": "@minecraft/server",
-			"version": "1.4.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-ui",
-			"version": "1.2.0-beta"
-		}
-	]
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "haste"
+    ],
+    "generated_with": {
+      "bridge": [
+        "2.6.0"
+      ],
+      "dash": [
+        "0.10.8"
+      ]
+    }
+  },
+  "header": {
+    "name": "Don't Walk!!",
+    "description": "Don't walk Addon adds useful item that makes traveling easeir\n\"that add-on has inspired from Terraria\"\nBy Haste (May be Ill change that name)",
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ],
+    "uuid": "c21a15b8-8412-491e-bdc6-d67089ec5e59",
+    "version": [
+      1,
+      1,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "6be17405-1a33-4fb0-be5e-087c5a8d290e",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "39241808-50a2-4cc8-9ddf-39b35af29ac2",
+      "entry": "scripts/main.js",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "1a5bb7fd-556d-4578-9ad7-655b5813441b",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.4.0-beta"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.2.0-beta"
+    }
+  ]
 }
