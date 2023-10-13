@@ -1,6 +1,6 @@
 /**
   * well, im the developer.
-  * I just want you enjoy my addon. but take all that
+  * I just want you enjoy my addon. but don't take all that
   * make as yours.
   * So if want to make content with this addon or use it 
   * in a mod pack, plz mension me as creator
@@ -11,7 +11,6 @@
 import {
   world,
   DynamicPropertiesDefinition,
-  MinecraftEntityTypes,
   Player,
   Entity,
 } from "@minecraft/server";
@@ -26,7 +25,9 @@ world.afterEvents.worldInitialize.subscribe((ev) => {
   d.defineString("home_pos", 1000);
   d.defineString("death_dimention", 100);
   d.defineString("death_pos", 1000);
-  ev.propertyRegistry.registerEntityTypeDynamicProperties(d, MinecraftEntityTypes.player);
+  ev
+    .propertyRegistry
+    .registerEntityTypeDynamicProperties(d, "minecraft:player");
 });
 
 world.afterEvents.entityDie.subscribe(ev => {

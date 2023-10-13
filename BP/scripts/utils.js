@@ -1,7 +1,14 @@
 import {
-  Vector,
-  World
+  World,
 } from "@minecraft/server";
+
+class Vector {
+  constructor(x, y, z){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+}
 
 /**
   * @param {String} arg

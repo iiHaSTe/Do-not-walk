@@ -4,14 +4,7 @@
     "authors": [
       "haste"
     ],
-    "generated_with": {
-      "bridge": [
-        "2.6.0"
-      ],
-      "dash": [
-        "0.10.8"
-      ]
-    }
+    "repo": "iiHaSTe/Do-not-walk"
   },
   "header": {
     "name": "Don't Walk!!",
@@ -24,7 +17,7 @@
     "uuid": "c21a15b8-8412-491e-bdc6-d67089ec5e59",
     "version": [
       1,
-      1,
+      2,
       0
     ]
   },
@@ -34,7 +27,7 @@
       "uuid": "6be17405-1a33-4fb0-be5e-087c5a8d290e",
       "version": [
         1,
-        0,
+        2,
         0
       ]
     },
@@ -61,7 +54,7 @@
     },
     {
       "module_name": "@minecraft/server",
-      "version": "1.4.0-beta"
+      "version": "1.6.0-beta"
     },
     {
       "module_name": "@minecraft/server-ui",

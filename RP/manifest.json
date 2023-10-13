@@ -4,14 +4,7 @@
     "authors": [
       "haste"
     ],
-    "generated_with": {
-      "bridge": [
-        "2.6.0"
-      ],
-      "dash": [
-        "0.10.8"
-      ]
-    }
+    "repo": "iiHaSTe/Do-not-walk"
   },
   "header": {
     "name": "Don't walk",
@@ -24,7 +17,7 @@
     "uuid": "1a5bb7fd-556d-4578-9ad7-655b5813441b",
     "version": [
       1,
-      1,
+      2,
       0
     ]
   },
@@ -34,7 +27,7 @@
       "uuid": "d810f810-10b4-490e-bc53-6563c1294893",
       "version": [
         1,
-        0,
+        2,
         0
       ]
     }
