@@ -2,28 +2,6 @@ import {
   World,
 } from "@minecraft/server";
 
-class Vector {
-  constructor(x, y, z){
-    this.x = x;
-    this.y = y;
-    this.z = z;
-  }
-}
-
-/**
-  * @param {String} arg
-  * @returns {Vector}
-  */
-export function toVector(arg) {
-  return new Vector(...arg.split('|').map(c => +c));
-}
-/**
-  * @param {Vector} arg
-  * @returns {String}
-  */
-export function toFString(arg) {
-  return `${Math.round(arg.x)}|${Math.round(arg.y)}|${Math.round(arg.z)}`;
-}
 /**
  * @param {World} world
  * @returns {Vector}
@@ -34,7 +12,7 @@ export default function(world) {
   if (defaultWorldSpawn.y < 319) return defaultWorldSpawn;
   defaultWorldSpawn.y = 319;
   const overworld = world.getDimension("overworld");
-  overworld.runCommandAsync("say ho");
+  overworld.runCommandAsync("say fixing a big bug... :D");
 
 
   while (true) {
@@ -43,7 +21,7 @@ export default function(world) {
       if (overworld.getBlock(defaultWorldSpawn).typeId !== "minecraft:air") {
         defaultWorldSpawn.y++;
         world.setDefaultSpawnLocation(defaultWorldSpawn);
-        overworld.runCommandAsync("say yes");
+        overworld.runCommandAsync("say finneshed");
         return defaultWorldSpawn;
       }
     } else if (defaultWorldSpawn <= (-64)) {

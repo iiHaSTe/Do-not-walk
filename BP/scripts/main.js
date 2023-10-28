@@ -10,25 +10,14 @@
 
 import {
   world,
-  DynamicPropertiesDefinition,
   Player,
   Entity,
+  Vector
 } from "@minecraft/server";
 import {
   ActionFormData
 } from "@minecraft/server-ui";
-import resetWorldSpawn, { toVector, toFString } from "./utils.js";
-
-world.afterEvents.worldInitialize.subscribe((ev) => {
-  const d = new DynamicPropertiesDefinition();
-  d.defineString("home_dimention", 100);
-  d.defineString("home_pos", 1000);
-  d.defineString("death_dimention", 100);
-  d.defineString("death_pos", 1000);
-  ev
-    .propertyRegistry
-    .registerEntityTypeDynamicProperties(d, "minecraft:player");
-});
+import resetWorldSpawn from "./utils.js";
 
 world.afterEvents.entityDie.subscribe(ev => {
   /** @type {Entity} */
@@ -36,7 +25,7 @@ world.afterEvents.entityDie.subscribe(ev => {
 
   if (entity.typeId !== "minecraft:player") return;
   entity.setDynamicProperty("death_dimention", entity.dimension.id);
-  entity.setDynamicProperty("death_pos", toFString(entity.location));
+  entity.setDynamicProperty("death_pos", entity.location);
 });
 
 world.afterEvents.itemUse.subscribe(({ itemStack: item, source }) => {
@@ -125,7 +114,9 @@ function home(source) {
       source.sendMessage(`Recall Scroll only works in overworld dimention`);
       return;
     }
-    source.setDynamicProperty("home_pos", toFString(source.location));
+
+    // source.setDynamicProperty("home_pos", toFString(source.location));
+    source.setDynamicProperty("home_pos", source.location);
     source.setDynamicProperty("home_dimention", source.dimension.id);
     world.playSound("beacon.activate", source.location);
   } else {
@@ -138,7 +129,7 @@ function home(source) {
       return;
     }
     source.teleport(
-      toVector(source.getDynamicProperty("home_pos")),
+      source.getDynamicProperty("home_pos"),
       { dimension: world.getDimension(source.getDynamicProperty("home_dimention")) }
     );
   }
@@ -148,15 +139,15 @@ function home(source) {
   * @param {Player} source
   */
 function lastDeath(source) {
-  const deathPos = source.getDynamicProperty("death_pos")
+  const deathPos = source.getDynamicProperty("death_pos");
   if (deathPos) {
     source.teleport(
-      toVector(deathPos),
+      deathPos,
       { dimension: world.getDimension(source.getDynamicProperty("death_dimention")) }
     );
     return;
   }
-  source.sendMessage("You didn't die yet.. " + source.name);
+  source.sendMessage("You didn't die yet... " + source.name);
 }
 
 /**
